@@ -1,0 +1,56 @@
+@import '../variables.scss';
+
+.Button {
+  cursor: pointer;
+
+  &--normal {
+    padding: 5px 10px;
+    font-weight: 500;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: background-color .3s;
+  }
+
+  &--bold {
+    padding: 5px 10px;
+    font-weight: 700;
+    border-radius: 4px;
+    font-size: 15px;
+    color: rgb(29, 29, 29);
+    text-align: center;
+    transition: background-color .3s;
+  }
+
+  &--blue {
+    background-color: #566ce9;
+
+    &:hover {
+      background-color: darken($color: #566ce9, $amount: 5);
+    }
+  }
+  
+  &--red {
+    background-color: $red;
+
+    &:hover {
+      background-color: darken($color: $red, $amount: 5);
+    }
+  }
+
+  &--green {
+    background-color: $green;
+
+    &:hover {
+      background-color: darken($color: $green, $amount: 5);
+    }
+  }
+
+  &--dark {
+    color: rgba(243, 243, 243, 0.4);
+    background-color: rgba(243, 243, 243, 0.04);
+    
+    &:hover {
+      background-color: darken($color: rgba(243, 243, 243, 0.04), $amount: 5);
+    }
+  }
+}

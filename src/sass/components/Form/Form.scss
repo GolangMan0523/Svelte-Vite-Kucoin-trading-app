@@ -1,0 +1,50 @@
+@import './Input.scss';
+
+.Form {
+  color: #fbfbfc;
+
+  &__row {
+    display: flex;
+    
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  
+  &__col {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  &__label {
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+
+  &__entity {
+    display: flex;
+    flex-direction: column;
+
+    .Input {
+      flex: 1;
+    }
+
+    &--err {
+      .Form__label {
+        color: rgba(255, 0, 0, 0.859);
+      } 
+    }
+  }
+
+  &__input {
+    display: flex;
+    align-items: center;
+    height: 39px;
+  }
+
+  &__note {
+    margin-top: 3px;
+    font-size: 12px;
+  }
+}

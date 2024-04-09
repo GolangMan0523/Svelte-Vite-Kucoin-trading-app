@@ -1,0 +1,20 @@
+- Websockets
+  add auto-reconnect support if connection lost
+  add abstraction logical for Websocket.addListener, because:
+    1) i can not kill callbacks after unsubscribing 
+    2) there are a lot of CPU cycles being repeted (all subscibe will subscribe to all topic events)
+
+- Charts
+  add volume
+  sub to a ws that pushes candles
+  update last candle with fresh price and volume from match websockets (that is being used in recenttrades)
+
+- General
+  mb need to add throttle to chart, OrderBook, list because the data is being pushed too frequently
+
+- tabs store
+  fix a bug where it replaces current tabs's data instead of right tabs
+
+
+- orderbook
+  I need to connect to websocket feed, and when I have at least one change, request full orderbook, then apply cached changes to the orderbook, then as usual
